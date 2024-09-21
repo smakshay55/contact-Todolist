@@ -1,29 +1,29 @@
 import React, { useState } from 'react';
 
-function TodoList() {
+function ContactManager() {
   const [name, setName] = useState('');
   const [email, setEmail] = useState('');
-  const [todos, setTodos] = useState([]);
+  const [contacts, setContacts] = useState([]);
 
-  const addTodo = (e) => {
+  const addContact = (e) => {
     e.preventDefault();
     if (name && email) {
-      const newTodo = { name, email };
-      setTodos([...todos, newTodo]);
+      const newContact = { name, email };
+      setContacts([...contacts, newContact]);
       setName('');
       setEmail('');
     }
   };
 
-  const deleteTodo = (index) => {
-    const updatedTodos = todos.filter((_, i) => i !== index);
-    setTodos(updatedTodos);
+  const deleteContact = (index) => {
+    const updatedContacts = contacts.filter((_, i) => i !== index);
+    setContacts(updatedContacts);
   };
 
   return (
-    <div className="todo-list">
-      <h1>To-Do List</h1>
-      <form onSubmit={addTodo} className="todo-form">
+    <div className="contact-manager">
+      <h1>Contact Manager</h1>
+      <form onSubmit={addContact} className="contact-form">
         <input
           type="text"
           placeholder="Name"
@@ -40,11 +40,11 @@ function TodoList() {
         />
         <button type="submit" className="add-button">Add</button>
       </form>
-      <div className="todos">
-        {todos.map((todo, index) => (
-          <div key={index} className="todo-item">
-            <span>{todo.name} ({todo.email})</span>
-            <button onClick={() => deleteTodo(index)}>Delete</button>
+      <div className="contacts">
+        {contacts.map((contact, index) => (
+          <div key={index} className="contact-item">
+            <span>{contact.name} ({contact.email})</span>
+            <button onClick={() => deleteContact(index)}>Delete</button>
           </div>
         ))}
       </div>
@@ -52,4 +52,4 @@ function TodoList() {
   );
 }
 
-export default TodoList;
+export default ContactManager;

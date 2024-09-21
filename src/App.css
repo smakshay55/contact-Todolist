@@ -8,7 +8,7 @@ body {
   background-color: #f8f9fa;
 }
 
-.todo-list {
+.contact-manager {
   width: 400px;
   padding: 20px;
   background: white;
@@ -23,7 +23,7 @@ h1 {
   margin-bottom: 20px;
 }
 
-.todo-form {
+.contact-form {
   display: flex;
   flex-direction: column;
 }
@@ -51,11 +51,11 @@ input {
   background-color: #0056b3;
 }
 
-.todos {
+.contacts {
   margin-top: 20px;
 }
 
-.todo-item {
+.contact-item {
   background: #f1f1f1;
   border: 1px solid #ced4da;
   border-radius: 5px;
@@ -66,7 +66,7 @@ input {
   align-items: center;
 }
 
-.todo-item button {
+.contact-item button {
   background-color: #dc3545;
   padding: 5px 10px;
   border-radius: 5px;
@@ -74,6 +74,6 @@ input {
   color: white;
 }
 
-.todo-item button:hover {
+.contact-item button:hover {
   background-color: #c82333;
 }
